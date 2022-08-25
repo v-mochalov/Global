@@ -1,0 +1,152 @@
+//Close acordeon
+$accordeonWidth: 790px; //With accordeon --- Длина акордеона
+$accordeonPadding: 0px 67px 24px 0px; //Padding accordeon --- Внутренние отступы
+$accordeonRadius: 15px; //Border radius
+$accordeonColorMain: #3f5858; //Text color
+$accordeonColorBg: rgba(255, 255, 255, 0.5); // Bg color
+$arrowsColor: $accent;
+//Open acordeon
+$acordeonMainColor: $accent;
+$openAcordeonTextColor: #6b7575;
+$openAcordeonBgColor: rgba(255, 255, 255, 0.5);
+$arrowsColorClose: $greyColor;
+.wrapper {
+	height: 100%;
+	max-width: 790px;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto 0;
+	@include md-d {
+		margin: 50px auto 0;
+	}
+}
+
+.block__item {
+	margin-bottom: 25px;
+	width: 100%;
+
+	@include md-d {
+		margin-bottom: 10px;
+	}
+}
+.block__title {
+	margin-left: 64px;
+	color: $accordeonColorMain;
+	border-radius: $accordeonRadius;
+	padding: $accordeonPadding;
+	// background: $accordeonColorBg;
+	text-align: left;
+	cursor: pointer;
+	//text settings
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 25px;
+	//any settings
+	// s
+	
+	transition: all 0.2s linear;
+	position: relative;
+	span{
+		transition: 0.3s linear;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+		bottom: 0;
+		background-color: $greyColor;
+		overflow: hidden;
+		&::after{
+			position: absolute;
+			left: 0;
+			top: 0;
+			content: '';
+			width: 100%;
+			height: 2px;
+			background: $accent;
+			left: -90%;
+		}	
+	}
+	@include md-d {
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 150%;
+		padding: 15px 51px 15px 18px;
+		margin-left: 0;
+	}
+
+}
+
+.block__title::before,
+.block__title::after {
+	content: "";
+	width: 20px;
+	height: 2px;
+	background-color: $arrowsColorClose;
+	position: absolute;
+	top: 14px;
+	transform: translate(0%, -50%);
+	transition: all 0.3s ease 0s;
+	@include md-d {
+		width: 12px;
+	}
+}
+
+.block__title:before {
+	transform: rotate(40deg);
+	right: 27px;
+}
+.block__title::after {
+	transform: rotate(-40deg);
+	right: 42px;
+	@include md-d {
+		right: 36px;
+	}
+}
+
+.block__title.active::before,
+.block__title.active::after {
+	background-color: $arrowsColor;
+}
+
+.block__title.active::before {
+	transform: rotate(-40deg);	
+}
+.block__title.active{
+	transition: 0.3s linear;
+	span{
+		&::after{
+			left: 0;
+			transition: 0.3s linear;
+		}
+	}
+}
+.block__title.active::after {
+	transform: rotate(40deg);
+}
+.block__title.active {
+	color: $acordeonMainColor;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	box-shadow: none;
+}
+
+.block__text {
+	display: none;
+	padding: 0px 33px;
+	margin-bottom: 10px;
+	padding: 25px 20px 25px 0px;	
+	margin-left: 67px;
+
+	color: $openAcordeonTextColor;
+	font-size: 16px;
+	line-height: 28px;
+	background: $openAcordeonBgColor;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	backdrop-filter: blur(40px);
+	@include md-d {
+		font-size: 14px;
+		line-height: 22px;
+		padding: 0px 20px 17px 25px;
+	}
+}

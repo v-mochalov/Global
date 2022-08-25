@@ -1,0 +1,48 @@
+// 1. Colors
+//Body color
+$colorBody: #fff;
+
+//TYPOGRAPHY
+//Main text
+$colorMain: #fff;
+//h1,h2,h3,h4,h5,h6
+$colorH1: #fff;
+$colorH2: #D8D8D8;
+$colorH3: #000000;
+$colorH4: #000000;
+$colorH5: #000000;
+$colorH6: #000000;
+
+//colors
+$accent: #45D33C;
+$greyColor: #E8E8E8;
+
+//Slider colors
+$dotsCol: #8D8C8F;
+$dotsActiveCol: $accent;
+
+body {
+  background: $colorBody;
+  color: $colorMain;
+}
+h1 {
+  // color: $colorH1;
+}
+h2 {
+  color: $colorH2;
+}
+h3 {
+  color: $colorH3;
+}
+h4 {
+  color: $colorH4;
+}
+h5 {
+  color: $colorH5;
+}
+h6 {
+  color: $colorH6;
+}
+a {
+  color: $colorMain;
+}

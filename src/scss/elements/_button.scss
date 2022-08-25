@@ -1,0 +1,21 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;  
+  cursor: pointer;
+  transition: 0.3s linear;
+  &--204{
+    height: 64px;
+    width: 204px;
+  }
+  &--border{
+    @extend %borderButton;
+    border-radius: 9.82805px;
+  }
+  &:hover {
+    transition: 0.3s linear;
+    color: $accent;    
+    // border: 2px solid #fff;
+  }
+}
