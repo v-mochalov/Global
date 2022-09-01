@@ -1,4 +1,7 @@
 
+
+
+//---------------------------------- ACCORDEON
 $(document).ready(function () {
 //Apaptive tabs
 	$(".tab_contents").hide();
@@ -38,7 +41,7 @@ $(".tab_drawer_headings").click(function () {
 	$("ul.tabss li[rel^='" + d_activeTab + "']").addClass("active");
 });
 
-	//Header BURGER
+//------------------------------------------------Header BURGER
 	$('.header__burger').click(function (event) {
 		$('.header__burger,.header__menu').toggleClass('active');
 		$('body').toggleClass('lock');
@@ -58,7 +61,7 @@ $(".tab_drawer_headings").click(function () {
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				dots: true,
-				arrows: false,
+				arrows: true,
 				adaptiveHeight: true,
 
 
@@ -74,26 +77,10 @@ $(".tab_drawer_headings").click(function () {
 	}).trigger('resize');
 })
 
-// Counter
-
-const counters = document.querySelectorAll(".counter");
-counters.forEach((counter) => {
-	counter.innerHTML = "0";
-	const updateCounter = () => {
-		const target = +counter.getAttribute("data-target")
-		const c = +counter.innerText;
-		if (c < target) {
-			counter.innerText = c + 1;
-			setTimeout(updateCounter, 1);
-		} else{
-			counter.innerText = target;
-		}
-	};
-	updateCounter();
-})
 
 
-// Anchor Slide
+//------------------------------------------- Anchor Slide
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 	anchor.addEventListener('click', function (e) {
 		e.preventDefault();
@@ -105,7 +92,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 	});
 });
 
-//Acordeon
+//--------------------------------------------------Acordeon
 $(document).ready(function () {
 	$('.block__title').click(function (event) {
 		if ($('.block').hasClass('one')) {
@@ -117,3 +104,26 @@ $(document).ready(function () {
 
 });
 
+//---------------------------------------Slider
+
+$('.work__slider').slick({
+	infinite: true,
+	slidesToShow: 1,
+	initialSlide: 1,
+	slidesToScroll: 1,
+	dots: true,
+	adaptiveHeight: true,
+	speed: 1000,
+	responsive: [
+		{
+			breakpoint: 775,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				dots: true,
+				arrows: false,
+				adaptiveHeight: true,
+			}
+		},
+	],
+});

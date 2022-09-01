@@ -2,6 +2,16 @@
     background: url('../img/intro-bg.webp') no-repeat;
     background-size: cover;
     position: relative;
+    &--ajax{
+        background: url('../img/ajax.jpg') no-repeat;
+        background-size: cover;        
+        .intro__downline{
+            margin-top: 30px;
+            font-size: 30px;
+            color: #fff;
+            padding-bottom: 300px;
+        }
+    }
     &__wrapper{
         display: flex;
         flex-direction: column;
@@ -31,6 +41,7 @@
         align-items: center;
         
     }
+    
     &__number{
         font-weight: 600;
         font-size: 71.65px;

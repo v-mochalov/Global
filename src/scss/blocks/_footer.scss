@@ -1,0 +1,96 @@
+.footer{
+    background: #1C1F2A;
+    padding: 58px 90px;
+    &__wrapper{
+        display: flex;
+    }
+    &__col{
+        display: flex;
+        flex-direction: column;
+        margin-right: 133px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    &__title{
+        @extend %font800;
+        white-space: nowrap;
+        font-size: 16px;
+        line-height: 21px;
+        color: #FFFFFF;
+    }
+    &__text {
+        @extend %font800;
+        margin-top: 28px;
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        line-height: 19px;
+        color: #8D8F94;
+        a{
+            margin-bottom: 20px;
+            color: #8D8F94;                
+            transition: 0.2s linear;
+            &:hover{
+                color: $accent;
+                transition: 0.2s linear;
+            }
+        }
+    }
+    &__social{
+        display: flex;
+        margin-top: 117px;
+    }
+    &__icon{
+        margin-right: 10px;
+        svg{
+            width: 33px;
+            height: 33px;
+            transition: 0.2s linear;
+            cursor: pointer;
+            &:hover{
+                
+                transition: 0.2s linear;
+                path{
+                    fill: $accent;   
+                    transition: 0.2s linear;                 
+                }
+                circle{
+                    transition: 0.2s linear;
+                    stroke: $accent;  
+                }
+            }
+        }
+    }
+    &__contact{
+        .footer__title{
+            margin-bottom: 40px;
+        }
+    }
+    &__call{
+        max-width: 187px;
+        font-size: 16px;
+        line-height: 25px;
+        margin-left: 13px;  
+       
+    }
+    &__nav{
+        .footer__title{
+            margin-bottom: 38px;
+            a{                                
+                transition: 0.2s linear;
+                &:hover{
+                    color: $accent;
+                    transition: 0.2s linear;
+                }
+            }
+        }
+    }
+    &__map{
+        display: flex;
+        margin-bottom: 24px;
+        &:last-child{
+            margin-bottom: 0;
+        }  
+    }
+}

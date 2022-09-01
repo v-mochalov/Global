@@ -1,0 +1,134 @@
+$blackColor: #fff;
+
+.header {
+  
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 6;
+  width: 100vw;
+    .container{
+      position: relative;
+    }
+    &__right{
+      display: flex;
+      align-items: center;
+      margin-right: 200px;
+    }
+    &__social{
+      margin-top: 41px;
+      margin-left: 22px;
+
+    }
+    &__logo{
+      position: relative;
+      z-index: 8;
+      margin-top: 30px;
+    }
+    &__wrapper{   
+      // margin-right: 50px;   
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__phone{
+      display: flex;
+      align-items: center;
+      margin-top: 41px;
+      font-size: 18.831px;
+      line-height: 25px;      
+      color: #FFFFFF;
+      img{
+        margin-right: 3px;
+      }
+    }
+    input{
+      opacity: 0;
+    }
+    input + label {
+      position: absolute;
+      top: 40px;
+      right: 20px;
+      height: 20px;
+      width: 15px; 
+      z-index: 20;
+      span {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        top: 50%;
+        margin-top: -1px;
+        left: 0;
+        display: block;
+        background: $blackColor;
+        transition: .5s;
+      }
+      span:first-child {
+        top: 3px; 
+      }
+      span:last-child {
+        top: 16px; 
+      }      
+    }
+    label:hover {
+      cursor: pointer;
+    }
+    input:checked + label { 
+      span {
+        opacity: 0;
+        top: 50%;
+      }
+      span:first-child {
+        opacity: 1;
+        transform: rotate(405deg);
+      }
+      span:last-child {
+        opacity: 1;
+        transform: rotate(-405deg);
+      }
+    }
+    input ~ nav {
+      background:  #1C1F2A;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0px;
+      z-index: 5;
+      transition: .5s;
+      transition-delay: .5s;
+      overflow: hidden;
+      > ul {
+        top: 189px;
+        left: 120px;       
+        position: absolute;
+      
+        > li {
+          opacity: 0;
+          transition: .5s;
+          transition-delay: 0s;
+          margin-bottom: 35px;
+          > a {            
+            font-size: 35px;
+            line-height: 46px;
+            color: #FFFFFF;
+            display: block;
+            
+          }
+        }
+      }
+    }
+    input:checked ~ nav { 
+      height: 100%;
+      transition-delay: 0s;
+      body{
+        overflow: hidden;
+      }
+      > ul {
+        > li {
+          opacity: 1;
+          transition-delay: .5s;
+        }
+      }
+    } 
+}

@@ -5,6 +5,13 @@
   color: #ffffff;  
   cursor: pointer;
   transition: 0.3s linear;
+  &--submit{
+        width: 260px;
+        height: 64px;
+        border: 2px solid #45D33C;
+        border-radius: 9.82805px;
+        background: transparent;
+  }
   &--204{
     height: 64px;
     width: 204px;

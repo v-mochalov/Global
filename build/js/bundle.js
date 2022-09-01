@@ -1,6 +1,7 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 
+//---------------------------------- ACCORDEON
 $(document).ready(function () {
   //Apaptive tabs
   $(".tab_contents").hide();
@@ -32,7 +33,7 @@ $(document).ready(function () {
     $(this).addClass("d_active");
     $("ul.tabss li").removeClass("active");
     $("ul.tabss li[rel^='" + d_activeTab + "']").addClass("active");
-  }); //Header BURGER
+  }); //------------------------------------------------Header BURGER
 
   $('.header__burger').click(function (event) {
     $('.header__burger,.header__menu').toggleClass('active');
@@ -52,7 +53,7 @@ $(document).ready(function () {
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: true,
-          arrows: false,
+          arrows: true,
           adaptiveHeight: true
         }).data({
           'init-slider': 1
@@ -66,26 +67,7 @@ $(document).ready(function () {
       }
     }
   }).trigger('resize');
-}); // Counter
-
-var counters = document.querySelectorAll(".counter");
-counters.forEach(function (counter) {
-  counter.innerHTML = "0";
-
-  var updateCounter = function updateCounter() {
-    var target = +counter.getAttribute("data-target");
-    var c = +counter.innerText;
-
-    if (c < target) {
-      counter.innerText = c + 1;
-      setTimeout(updateCounter, 1);
-    } else {
-      counter.innerText = target;
-    }
-  };
-
-  updateCounter();
-}); // Anchor Slide
+}); //------------------------------------------- Anchor Slide
 
 document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
   anchor.addEventListener('click', function (e) {
@@ -94,7 +76,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
       behavior: 'smooth'
     });
   });
-}); //Acordeon
+}); //--------------------------------------------------Acordeon
 
 $(document).ready(function () {
   $('.block__title').click(function (event) {
@@ -105,6 +87,26 @@ $(document).ready(function () {
 
     $(this).toggleClass('active').next().slideToggle(300);
   });
+}); //---------------------------------------Slider
+
+$('.work__slider').slick({
+  infinite: true,
+  slidesToShow: 1,
+  initialSlide: 1,
+  slidesToScroll: 1,
+  dots: true,
+  adaptiveHeight: true,
+  speed: 1000,
+  responsive: [{
+    breakpoint: 775,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true,
+      arrows: false,
+      adaptiveHeight: true
+    }
+  }]
 });
 
 },{}]},{},[1])
