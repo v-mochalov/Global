@@ -1,5 +1,8 @@
 .direction {
 	padding-top: 117px;	
+	position: relative;
+	z-index: 1;
+	
 	svg path {
 		fill: #556666;
 	}
