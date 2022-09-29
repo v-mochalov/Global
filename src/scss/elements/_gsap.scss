@@ -11,6 +11,37 @@
             opacity: 0;
         }
     }
+    &__benefits{
+        &--title{
+            transform: translate(200px, 0);
+            opacity: 0;
+        }
+        &--box{
+            transform: translate(30px, 0);
+            opacity: 0;
+        }
+    }
+    &__form{
+        opacity: 0;        
+    }
+    &__work{
+        &--title{
+            transform: translate(200px, 0);
+            opacity: 0;
+        }
+        &--slider{
+            opacity: 0;
+        }
+    }
+    &__map{
+        &--title{
+            transform: translate(200px, 0);
+            opacity: 0;
+        }
+    }
+    &__foot{
+        opacity: 0;
+    }
 }
 
 .gsap__opacity{

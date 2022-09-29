@@ -25,10 +25,51 @@ gsap.to(".gsap__direction--tag", {
 	delay: 0.2,
 	duration: 1.5,	
 	stagger: 0.3,
-	opacity: 1,
-	
+	opacity: 1,	
 });
-
+gsap.to(".gsap__benefits--title", {
+	scrollTrigger: ".gsap__benefits--title",
+	duration: 1,		
+	stagger: 0.3,
+	opacity: 1,
+	x: 0
+});
+gsap.to(".gsap__benefits--box", {
+	scrollTrigger: ".gsap__benefits--box",
+	duration: 1.5,		
+	stagger: 0.5,
+	opacity: 1,
+	x: 0
+});
+gsap.to(".gsap__form", {
+	scrollTrigger: ".gsap__form",
+	duration: 1.5,		
+	stagger: 0.5,
+	opacity: 1,
+});
+gsap.to(".gsap__work--title", {
+	scrollTrigger: ".gsap__work--title",
+	duration: 1,		
+	opacity: 1,
+	x: 0
+});
+gsap.to(".gsap__work--slider", {
+	scrollTrigger: ".gsap__work--slider",
+	duration: 2.5,
+	opacity: 1,
+});
+gsap.to(".gsap__map--title", {
+	scrollTrigger: ".gsap__map--title",
+	duration: 1,		
+	opacity: 1,
+	x: 0
+});
+gsap.to(".gsap__foot", {
+	scrollTrigger: ".gsap__foot",
+	duration: 1,		
+	stagger: 0.4,
+	opacity: 1,
+});
 //HEADER slide
 
 //---------------------------------- ACCORDEON TABS
@@ -99,7 +140,7 @@ $(document).ready(function () {
 //---------------------------------------Slider
 
 $('.work__slider').slick({
-	infinite: true,
+	infinite: false,
 	slidesToShow: 1,
 	initialSlide: 1,
 	slidesToScroll: 1,
