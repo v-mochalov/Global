@@ -1,14 +1,14 @@
 @font-face {
 	font-family: 'mont600';
-	src: url('../src/fonts/Mont-Regular.ttf?family=Rage');
+	src: url('/src/fonts/Mont-Regular.ttf?family=Rage');
 }
 @font-face {
 	font-family: 'mont700';
-	src: url('../src/fonts/Mont-SemiBold.ttf?family=Rage');
+	src: url('/src/fonts/Mont-SemiBold.ttf?family=Rage');
 }
 @font-face {
 	font-family: 'mont800';
-	src: url('../src/fonts/Mont-Bold.ttf?family=Rage');
+	src: url('/src/fonts/Mont-Bold.ttf?family=Rage');
 }
 
 %font600{
@@ -29,7 +29,7 @@
 
 
 body {
-  @extend %font600
+  @extend %font600;
 }
 h1 {    
   font-size: 116.73px;
@@ -37,13 +37,22 @@ h1 {
   span{
     color: $accent;
   }
+  @include md-d{
+    font-weight: 600;
+    font-size: 56.12px;
+    line-height: 72px;
+  }
 }
 h2 {
   @extend %font800;  
-   font-size: 55px;
+  font-size: 55px;
   line-height: 70px; 
   span{
     color: $accent;
+  }
+  @include md-d{
+    font-size: 25px;
+    line-height: 32px;
   }
 }
 h3 {

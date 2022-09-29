@@ -1,25 +1,48 @@
+gsap.registerPlugin(ScrollTrigger);
+gsap.to(".gsap__opacity", {
+	scrollTrigger: ".gsap__opacity",
+	x: 0,
+	duration: 1.5,	
+	stagger: 0.2,
+	opacity: 1
+});
+gsap.to(".gsap__header", {
+	scrollTrigger: ".gsap__header",
+	duration: 1.5,
+	delay: 0.5,	
+	stagger: 0.2,
+	opacity: 1
+});
+gsap.to(".gsap__direction--title", {
+	scrollTrigger: ".gsap__direction--title",
+	duration: 1,		
+	stagger: 0.2,
+	opacity: 1,
+	x: 0
+});
+gsap.to(".gsap__direction--tag", {
+	scrollTrigger: ".gsap__direction--tag",
+	delay: 0.2,
+	duration: 1.5,	
+	stagger: 0.3,
+	opacity: 1,
+	
+});
 
+//HEADER slide
 
-
-//---------------------------------- ACCORDEON
+//---------------------------------- ACCORDEON TABS
 $(document).ready(function () {
-//Apaptive tabs
-	$(".tab_contents").hide();
+$(".tab_contents").hide();
 $(".tab_contents:first").show();
-
-/* if in tab mode */
 $("ul.tabss li").click(function () {
-
 	$(".tab_contents").hide();
 	var activeTab = $(this).attr("rel");
 	$("#" + activeTab).fadeIn();
-
 	$("ul.tabss li").removeClass("active");
 	$(this).addClass("active");
-
 	$(".tab_drawer_headings").removeClass("d_active");
 	$(".tab_drawer_headings[rel^='" + activeTab + "']").addClass("d_active");
-
 	/*$(".tabs").css("margin-top", function(){ 
 		return ($(".tab_container").outerHeight() - $(".tabs").outerHeight() ) / 2;
 	});*/
@@ -27,16 +50,12 @@ $("ul.tabss li").click(function () {
 $(".tab_containers").css("min-height", function () {
 	return $(".tabss").outerHeight() + 50;
 });
-/* if in drawer mode */
 $(".tab_drawer_headings").click(function () {
-
 	$(".tab_contents").hide();
 	var d_activeTab = $(this).attr("rel");
 	$("#" + d_activeTab).fadeIn();
-
 	$(".tab_drawer_headings").removeClass("d_active");
 	$(this).addClass("d_active");
-
 	$("ul.tabss li").removeClass("active");
 	$("ul.tabss li[rel^='" + d_activeTab + "']").addClass("active");
 });
@@ -50,49 +69,22 @@ $(".tab_drawer_headings").click(function () {
 		$('.header__burger, .header__menu').removeClass('active');
 		$('body').removeClass('lock')
 	});
-	//Adaptive SlickSlider 
-	$(window).on('resize', function (e) {
 
-	var init = $(".news__wrapper").data('init-slider');
+//-----------------------------------------------Adaptive SlickSlider 
 
-	if (window.innerWidth < 769) {
-		if (init != 1) {			
-			$('.news__wrapper').slick({
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				dots: true,
-				arrows: true,
-				adaptiveHeight: true,
-
-
-			}).data({ 'init-slider': 1 });
-		}
-	}
-	
-	else {		
-		if (init == 1) {			
-			$('.news__wrapper').slick('unslick').data({ 'init-slider': 0 });
-		}
-	}
-	}).trigger('resize');
-})
-
-
+});
 
 //------------------------------------------- Anchor Slide
-
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 	anchor.addEventListener('click', function (e) {
 		e.preventDefault();
-
 		document.querySelector(this.getAttribute('href')).scrollIntoView({
-
 			behavior: 'smooth'
 		});
 	});
 });
 
-//--------------------------------------------------Acordeon
+//--------------------------------------------------Acordeon BLOCK
 $(document).ready(function () {
 	$('.block__title').click(function (event) {
 		if ($('.block').hasClass('one')) {
@@ -101,7 +93,7 @@ $(document).ready(function () {
 		}
 		$(this).toggleClass('active').next().slideToggle(300);
 	});
-
+	
 });
 
 //---------------------------------------Slider

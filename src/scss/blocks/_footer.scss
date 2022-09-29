@@ -1,8 +1,14 @@
 .footer{
     background: #1C1F2A;
     padding: 58px 90px;
+    @include md-d{
+        padding: 37px 0;
+    }
     &__wrapper{
         display: flex;
+        @include md-d{
+            flex-direction: column;
+        }
     }
     &__col{
         display: flex;

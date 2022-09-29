@@ -2,7 +2,9 @@
 	padding-top: 117px;	
 	position: relative;
 	z-index: 1;
-	
+	@include md-d{
+		padding-top: 58px;
+	}
 	svg path {
 		fill: #556666;
 	}
@@ -28,7 +30,9 @@
 		text-align: center;
 		margin-top: 73px;
 		background: transparent;
-
+		@include md-d{
+            margin-top: 33px;
+        }
 		.btn {
 			margin-top: 10px;
 			width: 100%;
@@ -187,11 +191,16 @@
 	.tab_drawer_headings {
 		display: none;
 		margin-left: 20px;
+		@include md-d{
+			height: 84px;
+			text-align: center;
+		}
 		@include sm-d {
 			margin-left: 10px;
+			
 		}
 	}
-
+	
 	.tabs_button-respons {
 		display: none;
 		@include md-d {
@@ -217,7 +226,8 @@
 			padding: 20px 30px 20px 20px;
 			margin-top: 10px;
 			display: flex;
-			justify-content: space-between;
+			justify-content: center;
+			align-items: center;
 			cursor: pointer;
 			-webkit-touch-callout: none;
 			-webkit-user-select: none;
@@ -225,14 +235,33 @@
 			-moz-user-select: none;
 			-ms-user-select: none;
 			user-select: none;
-
+			text-align: center;
 			&:hover {
 				color: $tab_text_color_hover;
+			}
+			&--2{
+				
+					@include md-d{
+						margin-top: 40px;
+					}
+				
+			}
+			@include md-d{
+				background: #FFFFFF;
+				border: 2px solid #D8D8D8;
+				border-radius: 15.802px;				
 			}
 		}
 		.d_active {
 			color: $tab_text_color_active;
 			background: #000;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
+			div{
+
+			}
 		}
 	}
 }

@@ -17,14 +17,14 @@ $arrowsColorClose: $greyColor;
 	justify-content: center;
 	margin: 0 auto 0;
 	@include md-d {
-		margin: 50px auto 0;
+		margin: 22px auto 0;
 	}
 }
 
 .block__item {
 	margin-bottom: 25px;
 	width: 100%;
-
+	
 	@include md-d {
 		margin-bottom: 10px;
 	}
@@ -41,8 +41,9 @@ $arrowsColorClose: $greyColor;
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 25px;
-	//any settings
-	// s
+	@include md-d{
+		
+	}
 	
 	transition: all 0.2s linear;
 	position: relative;
@@ -66,12 +67,12 @@ $arrowsColorClose: $greyColor;
 			left: -90%;
 		}	
 	}
-	@include md-d {
-		font-weight: 500;
-		font-size: 12px;
-		line-height: 150%;
+	@include md-d {		
 		padding: 15px 51px 15px 18px;
-		margin-left: 0;
+		margin-left: 15px;
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 22px;
 	}
 
 }
@@ -88,6 +89,7 @@ $arrowsColorClose: $greyColor;
 	transition: all 0.3s ease 0s;
 	@include md-d {
 		width: 12px;
+		top: 25px;
 	}
 }
 
@@ -147,6 +149,9 @@ $arrowsColorClose: $greyColor;
 	@include md-d {
 		font-size: 14px;
 		line-height: 22px;
-		padding: 0px 20px 17px 25px;
+		padding: 0px 20px 17px 0px;
+		margin-left: 15px;
+		margin-top: 20px;
+		
 	}
 }

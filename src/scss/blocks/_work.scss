@@ -1,10 +1,16 @@
 .work {
     position: relative;
     padding-top: 152px;
+    @include md-d{
+        padding-top: 66px;
+    }
 	&__slider{
         display: flex;
         flex-direction: column;
         margin-top: 70px;
+        @include md-d{
+            margin-top: 30px;
+        }
     }
     &__item{
         margin-left: 30px;
@@ -12,7 +18,11 @@
         display: flex;
         justify-content: center;
         position: relative;
-       
+        
+       @include md-d{
+        margin-left: 0;
+        
+    }
         img {
             transition: 0.3s linear;
             width: 100%;  
@@ -27,7 +37,7 @@
                 height: 300px;
             }
             @include md-d{
-                height: 100%;
+                height: 456px;
             }
         }
         .work__hover{
@@ -72,7 +82,7 @@
 	.slick-slide {
 		height: inherit !important;
 		@include md-d {
-		// 	margin: 15px 30px;
+		
 		}
 	}
 	.slick-list {

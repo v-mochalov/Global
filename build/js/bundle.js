@@ -1,13 +1,40 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 
-//---------------------------------- ACCORDEON
+gsap.registerPlugin(ScrollTrigger);
+gsap.to(".gsap__opacity", {
+  scrollTrigger: ".gsap__opacity",
+  x: 0,
+  duration: 1.5,
+  stagger: 0.2,
+  opacity: 1
+});
+gsap.to(".gsap__header", {
+  scrollTrigger: ".gsap__header",
+  duration: 1.5,
+  delay: 0.5,
+  stagger: 0.2,
+  opacity: 1
+});
+gsap.to(".gsap__direction--title", {
+  scrollTrigger: ".gsap__direction--title",
+  duration: 1,
+  stagger: 0.2,
+  opacity: 1,
+  x: 0
+});
+gsap.to(".gsap__direction--tag", {
+  scrollTrigger: ".gsap__direction--tag",
+  delay: 0.2,
+  duration: 1.5,
+  stagger: 0.3,
+  opacity: 1
+}); //HEADER slide
+//---------------------------------- ACCORDEON TABS
+
 $(document).ready(function () {
-  //Apaptive tabs
   $(".tab_contents").hide();
   $(".tab_contents:first").show();
-  /* if in tab mode */
-
   $("ul.tabss li").click(function () {
     $(".tab_contents").hide();
     var activeTab = $(this).attr("rel");
@@ -23,8 +50,6 @@ $(document).ready(function () {
   $(".tab_containers").css("min-height", function () {
     return $(".tabss").outerHeight() + 50;
   });
-  /* if in drawer mode */
-
   $(".tab_drawer_headings").click(function () {
     $(".tab_contents").hide();
     var d_activeTab = $(this).attr("rel");
@@ -42,31 +67,7 @@ $(document).ready(function () {
   $('.header__link').click(function (event) {
     $('.header__burger, .header__menu').removeClass('active');
     $('body').removeClass('lock');
-  }); //Adaptive SlickSlider 
-
-  $(window).on('resize', function (e) {
-    var init = $(".news__wrapper").data('init-slider');
-
-    if (window.innerWidth < 769) {
-      if (init != 1) {
-        $('.news__wrapper').slick({
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: true,
-          arrows: true,
-          adaptiveHeight: true
-        }).data({
-          'init-slider': 1
-        });
-      }
-    } else {
-      if (init == 1) {
-        $('.news__wrapper').slick('unslick').data({
-          'init-slider': 0
-        });
-      }
-    }
-  }).trigger('resize');
+  }); //-----------------------------------------------Adaptive SlickSlider 
 }); //------------------------------------------- Anchor Slide
 
 document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
@@ -76,7 +77,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
       behavior: 'smooth'
     });
   });
-}); //--------------------------------------------------Acordeon
+}); //--------------------------------------------------Acordeon BLOCK
 
 $(document).ready(function () {
   $('.block__title').click(function (event) {

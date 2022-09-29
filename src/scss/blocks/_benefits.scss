@@ -1,11 +1,20 @@
 .benefits{
     padding-top: 145px;
+    @include md-d{
+        padding-top: 60px;
+    }
     &__remark{
         font-size: 20px;
         line-height: 30px;
         color: #6D6D6D;
         margin-top: 24px;
         width: 422px;
+        @include md-d{
+            width: auto;
+            font-size: 16px;
+            line-height: 147.8%;
+            margin-top: 21px;
+        }
     }
     &__wrapper{
         margin-top: 16px;
@@ -23,6 +32,9 @@
         margin-top: 24px;
         padding: 22px 50px 22px 29px;
         &:first-child{
+            margin-left: 0;
+        }
+        @include md-d{
             margin-left: 0;
         }
     }

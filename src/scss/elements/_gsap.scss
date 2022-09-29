@@ -1,0 +1,19 @@
+.gsap{
+    &__header{
+        opacity: 0;
+    }
+    &__direction{
+        &--title{
+            transform: translate(200px, 0);
+            opacity: 0;
+        }
+        &--tag{
+            opacity: 0;
+        }
+    }
+}
+
+.gsap__opacity{
+    transform: translate(200px, 0);
+    opacity: 0;
+}
