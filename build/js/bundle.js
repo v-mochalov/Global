@@ -69,8 +69,8 @@ gsap.to(".gsap__map--title", {
 });
 gsap.to(".gsap__foot", {
   scrollTrigger: ".gsap__foot",
-  duration: 1,
-  stagger: 0.4,
+  duration: 0.2,
+  stagger: 0.2,
   opacity: 1
 }); //HEADER slide
 //---------------------------------- ACCORDEON TABS
