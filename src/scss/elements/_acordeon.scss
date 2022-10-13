@@ -59,12 +59,13 @@ $arrowsColorClose: $greyColor;
 		&::after{
 			position: absolute;
 			left: 0;
-			top: 0;
+			bottom: 0;
 			content: '';
 			width: 100%;
 			height: 2px;
 			background: $accent;
 			left: -90%;
+			transition: 0.3s linear;
 		}	
 	}
 	@include md-d {		
@@ -118,6 +119,7 @@ $arrowsColorClose: $greyColor;
 	span{
 		&::after{
 			left: 0;
+			bottom: 0;
 			transition: 0.3s linear;
 		}
 	}

@@ -1,3 +1,24 @@
+// var header = document.querySelectorAll('.header');
+// 		window.onscroll = () => {
+// 			if (window.pageYOffset <= 0) {
+// 				header.classList.add('header__active');
+// 			} else {
+// 				header.classList.remove('header__active');
+// 			}
+// 		};	
+// 		console.log(window.pageYOffset)
+
+(function () {
+	var header = document.querySelector('.header');
+	window.onscroll = () => {
+		if (window.pageYOffset > 22) {
+			header.classList.add('header__active');
+		} else {
+			header.classList.remove('header__active');
+		}
+	};
+}());
+
 gsap.registerPlugin(ScrollTrigger);
 gsap.to(".gsap__opacity", {
 	scrollTrigger: ".gsap__opacity",
@@ -71,6 +92,9 @@ gsap.to(".gsap__foot", {
 	opacity: 1,
 });
 //HEADER slide
+		// const window = window;
+		
+
 
 //---------------------------------- ACCORDEON TABS
 $(document).ready(function () {
@@ -138,7 +162,6 @@ $(document).ready(function () {
 });
 
 //---------------------------------------Slider
-
 $('.work__slider').slick({
 	infinite: false,
 	slidesToShow: 1,
