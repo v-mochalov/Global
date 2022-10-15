@@ -158,13 +158,17 @@ $blackColor: #fff;
       z-index: 5;
       transition: .5s;
       transition-delay: .5s;
-      overflow: hidden;
+      
       > ul {
         top: 189px;
         left: 120px;       
         position: absolute;
         display: flex;
         flex-direction: column;
+        @include md-d{
+          top: 95px;
+          left: 15px;
+        }
         > li {
           opacity: 0;
           transition: .5s;
@@ -175,7 +179,9 @@ $blackColor: #fff;
             line-height: 46px;
             color: #FFFFFF;
             display: block;
-            
+            @include md-d{
+              font-size: 25px;
+            }
           }
         }
       }
@@ -183,9 +189,7 @@ $blackColor: #fff;
     input:checked ~ nav { 
       height: 100%;
       transition-delay: 0s;
-      body{
-        overflow: hidden;
-      }
+      
       > ul {
         > li {
           opacity: 1;
@@ -208,30 +212,75 @@ $blackColor: #fff;
     /*PURELY FUNCTIONNAL CSS START*/
     .dropdown, .link, .link-hover {
       display: inline-block; /*keep from overflow*/
+      transition: 0.3s linear;
+
     }
     .dropdown{
-  
+      transition: 0.3s linear;
+
+    }
+    .link-hover{
+      &--first{
+        @include md-d{
+          &:hover{
+            padding-bottom: 150px;
+          }
+        }
+      }
+      &--second{
+        @include md-d{
+          &:hover{
+            padding-bottom: 300px;
+          }
+        }
+      }
     }
     .dropdown-content {
       display: none; /*don't show it on default*/
+      opacity: 0;
       position: absolute; /*dropdown needs to be below the text*/
-      left: 500px;
-      top: -20px;
+      
       background: transparent;
       white-space: nowrap; 
-      
+      transition: 0.3s linear;
+      &--first{
+        left: 500px;
+        top: -20px;
+        @include md-d{
+          left: 0;
+          top: 120px;
+        }
+      }
+      &--second{
+        left: 500px;
+      top: -20px;
+        @include md-d{
+          left: 0;
+          top: 200px;
+        }
+      }
       a{
+        transition: 0.3s linear;
         font-size: 25px !important;   
+        @include md-d{
+          font-size: 18px !important;
+        }
       } 
     }
     .dropdown:hover .dropdown-content {
-      display: flex;
+      transition: 0.3s linear;
+      opacity: 1;
+      display: flex;      
       flex-direction: column;
       align-items: flex-start; 
     } /*concerns all items inside the .dropdown div, when the .dropdown gets hovered*/
     .dropdown-content .link {
-      display: block; /*not inline because we want to skip lines*/
+      display: block;
+     /*not inline because we want to skip lines*/
       margin-top: 20px;
+      opacity: 1;
+      transition: 0.3s linear;
+      transition-delay: 0.3s;
     } 
     
     
@@ -245,7 +294,9 @@ $blackColor: #fff;
       color: #FFFFFF;       
       mix-blend-mode: difference;
       transition: 0.3s linear;
-      
+      @include md-d{
+        font-size: 25px;
+      }
       svg{
           margin-left: 15px;
           margin-top: 2px;
@@ -275,5 +326,5 @@ $blackColor: #fff;
       color: $accent;
     }
     .link:active, .link-hover:active {
-      
+      color: $accent;
     }
