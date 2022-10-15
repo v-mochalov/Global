@@ -163,7 +163,8 @@ $blackColor: #fff;
         top: 189px;
         left: 120px;       
         position: absolute;
-      
+        display: flex;
+        flex-direction: column;
         > li {
           opacity: 0;
           transition: .5s;
@@ -189,7 +190,90 @@ $blackColor: #fff;
         > li {
           opacity: 1;
           transition-delay: .5s;
+          a{
+            transition: 0.3s linear;
+
+            &:hover{
+              transition: 0.3s linear;
+              color: $accent;
+            }
+          }
+          
         }
       }
     } 
 }
+
+
+    /*PURELY FUNCTIONNAL CSS START*/
+    .dropdown, .link, .link-hover {
+      display: inline-block; /*keep from overflow*/
+    }
+    .dropdown{
+  
+    }
+    .dropdown-content {
+      display: none; /*don't show it on default*/
+      position: absolute; /*dropdown needs to be below the text*/
+      left: 500px;
+      top: -20px;
+      background: transparent;
+      white-space: nowrap; 
+      
+      a{
+        font-size: 25px !important;   
+      } 
+    }
+    .dropdown:hover .dropdown-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; 
+    } /*concerns all items inside the .dropdown div, when the .dropdown gets hovered*/
+    .dropdown-content .link {
+      display: block; /*not inline because we want to skip lines*/
+      margin-top: 20px;
+    } 
+    
+    
+    .link, .link-hover {    
+      width: 500px;
+      background: transparent; 
+      display: flex;
+      align-items: center;
+      font-size: 35px;
+      line-height: 46px;
+      color: #FFFFFF;       
+      mix-blend-mode: difference;
+      transition: 0.3s linear;
+      
+      svg{
+          margin-left: 15px;
+          margin-top: 2px;
+          width: 15px;
+          height: 15px;
+          transform: rotate(270deg); 
+          transition: 0.3s linear;
+         
+      }   
+      &:hover{
+        color: $accent;
+        cursor: pointer;
+        transition: 0.3s linear;
+        svg{
+          margin-left: 20px;
+          transition: 0.3s linear; 
+          path{
+            fill: $accent;
+          }         
+        }
+
+      }
+    }
+    .link:hover, .link-hover:hover {
+      background: transparent;
+      opacity: 1;
+      color: $accent;
+    }
+    .link:active, .link-hover:active {
+      
+    }
