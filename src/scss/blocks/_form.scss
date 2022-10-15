@@ -43,7 +43,7 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        max-width: 830px;        
+        max-width: 860px;        
     }
     &__contain{
         margin-top: 16px;
@@ -51,7 +51,7 @@
         display: flex;   
         justify-content: space-between;
         flex-wrap: nowrap;   
-        margin-left: 15px;  
+        margin-left: 30px;  
         @include md-d{
             flex-direction: column;
             align-items: center;
@@ -61,7 +61,8 @@
         }
     }
     input{
-        margin-left: 24px;
+        margin-left: 0px;
+        width: 250px;   
         background: transparent;
         color: #646877;
         font-size: 18px;
@@ -86,7 +87,10 @@
         font-size: 16px;
         line-height: 147.8%;
         color: #D8D8D8;
+        margin-right: 15px; 
+        white-space: nowrap;        
     }
+    
     &__button{
         margin-top: 59px;        
         align-self: center;       
