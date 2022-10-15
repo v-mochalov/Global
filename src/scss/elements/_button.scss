@@ -12,6 +12,12 @@
         border-radius: 9.82805px;
         background: transparent;
   }
+  &--md{
+    display: none;
+    @include md-d{
+      display: flex;
+    }
+  }
   &--intro{
     width: 220px;
     height: 50px;
