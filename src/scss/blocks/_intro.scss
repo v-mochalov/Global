@@ -152,6 +152,7 @@
             flex-direction: column;
             align-items: center;
             input{
+                width: 200px;
                 background: transparent; 
                 border-bottom: 2px solid $accent;
                 padding-bottom: 10px;                
@@ -172,7 +173,9 @@
         @extend %font700;
         font-size: 25px;
         line-height: 25px;
-        
+        @include md-d{
+            margin: 0 auto;
+        }
     }
     &__form-contain{
         display: flex;
@@ -191,14 +194,21 @@
         color: rgba(255, 255, 255, 0.601);
         font-size: 16px;
         margin-top: 20px;
+        @include md-d{
+            margin: 15px auto 0;
+ 
+        }
     }
     &__form-button{
         margin-top: 30px;
+        margin-bottom: 10px;
     }
     &__visible{
         display: none;
         @include md-d{
-            display: block;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             .intro__form{
                 display: block;
                 margin-left: 0;

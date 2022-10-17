@@ -106,7 +106,7 @@
                 </h1> 
                 <div class="intro__remark gsap__opacity">
                   Індивідуальне рішення саме для вашої задачі:
-охорона квартири, захист приватного будинку, контроль офісу та інші вимоги для забезпечення безпеки.
+                  охорона квартири, захист приватного будинку, контроль офісу та інші вимоги для забезпечення безпеки.
                 </div>  
                 <div class="intro__btn btn btn--border btn--204 btn--md gsap__opacity">
                   детальніше
@@ -170,28 +170,42 @@
           </div> 
         </section>
 
-        <section> 
+        <section class="desc"> 
           <div class="container">
-            <div style=" 
-            font-size: 40px; 
-            margin: 100px 0px 0; 
-            line-height: 70px; 
-            color: black; 
-            max-width: 800px;">Виконаємо <span>монтаж </span>та <span>налаштування</span> систем кoнтролю доступу</div> 
-            <div> 
-          <ul style=" 
-            margin-left: 40px; 
-            margin-bottom: 100px; 
-            color: black; 
-            font-size: 27px; 
-            line-height: 40px;"> 
-            <li style="margin-top: 30px;">Запропонуємо Вам оптимальний тип і вартість СКД з урахуванням специфіки Вашого об'єкту</li> 
-            <li style="margin-top: 30px;">Ми маємо всі необхідні ліцензії та надаємо гарантію на якість робіт, обладнання та матеріали</li> 
-          </ul> 
-          </div> 
-          </div> 
-   
-      </section> 
+            <h2>Виконаємо <span> монтаж</span> та <span>налаштування</span> </h2>
+            <div class="desc__wrapper">
+              <ul class="desc__column">
+                <li class="desc__content">Запропонуємо Вам оптимальний тип і вартість сигналізації з урахуванням специфіки Вашого об'єкту</li>
+                <li class="desc__content">Ми маємо всі необхідні ліцензії та надаємо гарантію на якість робіт, обладнання та матеріали</li>
+              </ul>
+            </div>
+          </div>   
+        </section> 
+
+        <section class="form">      
+          <div class="container">
+            <div class="form__wrapper">
+              <div class="form__title gsap__form"><span>Зв’яжіться</span> з нами, якщо маєте питтаня!</div>
+              <div class="form__remark gsap__form">Залишіть свої контакти і наш менеджер проконсультує Вас</div>
+              <form action="telegram.php" method="POST" class="gsap__form">
+                <div class="form__contain">
+                  <div class="form__text">
+                    Вітаю, мене звати
+                  </div>
+                  <input type="text" name="user_name" placeholder="Степан Бандера" />
+                </div>
+                <div class="form__contain">
+                  <div class="form__text">
+                    Мій номер
+                  </div>
+                  <input type="text" name="user_interes" placeholder="066 123 45 67" />
+                </div>              
+                <div class="form__button"><button type="submit" class="btn btn--submit">залишити заявку</button></div>
+              </form>
+              
+            </div>
+          </div>
+        </section>
 
         <section class="benefits">
           <div class="container">
@@ -232,30 +246,7 @@
           </div>
         </section>
 
-        <section class="form">      
-          <div class="container">
-            <div class="form__wrapper">
-              <div class="form__title gsap__form"><span>Зв’яжіться</span> з нами, якщо маєте питтаня!</div>
-              <div class="form__remark gsap__form">Залишіть свої контакти і наш менеджер проконсультує Вас</div>
-              <form action="telegram.php" method="POST" class="gsap__form">
-                <div class="form__contain">
-                  <div class="form__text">
-                    Вітаю, мене звати
-                  </div>
-                  <input type="text" name="user_name" placeholder="Степан Бандера" />
-                </div>
-                <div class="form__contain">
-                  <div class="form__text">
-                    Мій номер
-                  </div>
-                  <input type="text" name="user_interes" placeholder="066 123 45 67" />
-                </div>              
-                <div class="form__button"><button type="submit" class="btn btn--submit">залишити заявку</button></div>
-              </form>
-              
-            </div>
-          </div>
-        </section>
+        
 
         <section class="work">
           <div class="container">
