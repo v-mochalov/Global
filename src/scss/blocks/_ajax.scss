@@ -1,0 +1,183 @@
+.ajax{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover; 
+    .intro--ajax-video  {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        video{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }  
+    h1{
+        max-width: 600px;
+        font-size: 60px;
+        line-height: 65px;
+    }
+    &__wrapper{
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100vh;
+    }
+    &__left{
+        align-self: flex-end;
+        margin-bottom: 16%;
+        @include xxl-d{
+            margin-bottom: 10%;
+        }
+    } 
+    .intro__form{
+        width: 400px;
+        margin-top: 0;
+        
+    }
+}
+
+.ajax-product{
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 150px;
+    }
+    &__box{
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+        border-radius: 20px;
+        width: 280px;
+        height: 400px;
+        
+        background-position: center;
+        background-size: 100%;
+        display: flex;
+        align-items: flex-end;
+        overflow: hidden;
+        transition: 0.3s linear;
+        margin-bottom: 20px;
+        &:hover{
+            background-size: 110%;
+            transition: 0.3s linear;
+            .ajax-product__text{
+                transition: 0.3s linear;
+
+                color: $accent !important;
+            }
+        }
+        &--1{background: url('../img/ajax1.avif') no-repeat;
+                background-position: center;
+                background-size: 100%;
+                transition: 0.3s linear;
+                &:hover{
+                    transition: 0.3s linear;
+                    background-size: 105%;
+                }
+            }
+        &--2{background: url('../img/ajax2.avif') no-repeat;
+                background-position: center;
+                background-size: 100%;
+                transition: 0.3s linear;
+                &:hover{
+                    transition: 0.3s linear;
+                    background-size: 105%;
+                }
+            }
+        &--3{background: url('../img/ajax3.avif') no-repeat;
+                background-position: center;
+                background-size: 100%;
+                transition: 0.3s linear;
+                &:hover{
+                    transition: 0.3s linear;
+                    background-size: 105%;
+                }
+            }
+        &--4{background: url('../img/ajax4.avif') no-repeat;
+                background-position: center;
+                background-size: 100%;
+                transition: 0.3s linear;
+                &:hover{
+                    transition: 0.3s linear;
+                    background-size: 105%;
+                }
+            }
+        &--5{background: url('../img/ajax5.avif') no-repeat;
+                background-position: center;
+                background-size: 100%;
+                transition: 0.3s linear;
+                &:hover{
+                    transition: 0.3s linear;
+                    background-size: 105%;
+                }
+            }
+        &--6{background: url('../img/ajax6.avif') no-repeat;
+                background-position: center;
+                background-size: 100%;
+                transition: 0.3s linear;
+                &:hover{
+                    transition: 0.3s linear;
+                    background-size: 105%;
+                }
+            }
+        &--7{background: url('../img/ajax7.avif') no-repeat;
+                background-position: center;
+                background-size: 100%;
+                transition: 0.3s linear;
+                &:hover{
+                    transition: 0.3s linear;
+                    background-size: 105%;
+                }
+            }
+        &--8{background: url('../img/ajax8.avif') no-repeat;
+                background-position: center;
+                background-size: 100%;
+                transition: 0.3s linear;
+                &:hover{
+                    transition: 0.3s linear;
+                    background-size: 105%;
+                }
+            }
+        &--9{background: url('../img/ajax9.avif') no-repeat;
+                background-position: center;
+                background-size: 100%;
+                transition: 0.3s linear;
+                &:hover{
+                    transition: 0.3s linear;
+                    background-size: 105%;
+                }
+            }
+        &--10{background: url('../img/ajax10.avif') no-repeat;
+                background-position: center;
+                background-size: 100%;
+                transition: 0.3s linear;
+                &:hover{
+                    transition: 0.3s linear;
+                    background-size: 105%;
+                }
+            }
+        &--11{background: url('../img/ajax11.avif') no-repeat;
+                background-position: center;
+                background-size: 100%;
+                transition: 0.3s linear;
+                &:hover{
+                    transition: 0.3s linear;
+                    background-size: 105%;
+                }
+            }
+    }
+    &__text{
+        font-size: 25px;
+        text-transform: uppercase;
+        // max-width: 200px;
+        font-family: 'mont800';
+        font-style: normal;
+        font-weight: 800;
+    }
+}

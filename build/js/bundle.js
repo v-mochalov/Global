@@ -168,7 +168,7 @@ $('.work__slider').slick({
     settings: {
       slidesToShow: 1,
       slidesToScroll: 1,
-      dots: true,
+      dots: false,
       arrows: false,
       adaptiveHeight: true
     }

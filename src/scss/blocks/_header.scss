@@ -11,11 +11,16 @@ $blackColor: #fff;
   width: 100%;
   padding-top: 15px;  
   transition: 0.3s linear;
-
+  
     &__active{
       transition: 0.3s linear;
       margin-top: -15px;
       background: #1C1F2A;
+      .header__logo--video {
+        a{
+          color: #ffffff;
+        }
+      }
     }
     .container{
       position: relative;
@@ -29,6 +34,12 @@ $blackColor: #fff;
     &__logo{
       font-size: 25px;    
       padding-top: 10px; 
+      // &--video{
+      //   a{
+      //     color: #1C1F2A;
+
+      //   }
+      // }
       span{
         color: $accent;
       }

@@ -1,0 +1,57 @@
+.mobile{
+    padding: 80px 20px;
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        @include lg-d{
+            flex-direction: column;
+            
+        }
+    }
+    &__content{
+        font-family: 'mont700';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 39px;
+        color: #5c5c5c;
+        text-align: center;
+        span{
+            color: $accent;
+        }
+    }
+}
+
+.night{
+    position: relative;
+    height: 400px;
+    background-image: url('/build/img/night.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 40px;
+    &__wrapper{
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__content{
+        font-family: 'mont700';
+        font-style: normal;         
+        max-width: 400px;
+        text-align: center;
+        margin-top: 40px;
+        margin-right: 100px;            
+    }
+    &__title{
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $accent;
+        font-size: 25px;
+        line-height: 30px;
+        color: $accent;
+        margin-bottom: 15px;
+    }
+    &__text{
+        font-size: 20px;
+        line-height: 30px;
+    }
+}

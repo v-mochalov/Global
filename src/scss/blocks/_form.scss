@@ -2,6 +2,9 @@
     margin-top: 150px;
     background-color: #1C1F2A;
     padding-bottom: 65px;
+    &--video{
+        margin-top: 0;
+    }
     @include md-d{
         margin-top: 82px;
     }

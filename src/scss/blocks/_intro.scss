@@ -3,17 +3,53 @@
     position: relative;
     margin-top: -15px;
     height: 102vh;
+    &__bg{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #00000049;
+    }
     &__slider{
         display: flex;
         align-items: flex-start;
+        &--flex{
+            justify-content: space-around;
+
+        }
     }
     &--main{
         background: url('../img/intro-bg.webp') no-repeat;
         background-size: cover;
     }
-    &--ajax{
-        background: url('../img/ajax.jpg') no-repeat;
-        background-size: cover;        
+
+    &--turnik{
+        position: relative;
+        background: url('../img/turnik.png') no-repeat;
+        background-size: 100%;
+        background-position: center;
+        @include xl-d{
+            background-size: cover;
+        }.container{
+            height: 100%;
+        }
+        .intro__slider{
+            height: 100%;
+        }
+        .intro__black{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #00000086;
+        }
+        .intro__wrapper{
+            @include lg-d{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+            }
+           
+        }
         .intro__downline{
             margin-top: 30px;
             font-size: 30px;
@@ -21,7 +57,101 @@
             padding-bottom: 300px;
         }
         h1{
+            font-size: 80px;
+            max-width: 600px;
+            line-height: 90px;
+            @include md-d{
+                font-size: 60px;
+                text-align: center;
+                line-height: 60px;
+            }
+        }
+    }
+    &--ajax{
+        background: url('../img/showreel-animation.lg.mp4') no-repeat;
+        background-size: cover; 
+        .intro--ajax-video  {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            video{
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }     
+        .intro__downline{
+            margin-top: 30px;
+            font-size: 30px;
+            color: #fff;
+            padding-bottom: 300px;
+        }
+        .intro__wrapper{
+            display: flex;
+            align-items: center; 
+        }
+        h1{
             font-size: 70px;
+            max-width: 600px;
+            line-height: 90px;
+            @include md-d{
+                font-size: 60px;
+                text-align: center;
+                line-height: 60px;
+            }
+        }
+    }
+    &--video {
+        background: url('../img/video1.jpg') no-repeat;
+        background-size: 100%;
+        background-position: center;
+        @include xl-d{
+            background-size: cover;
+        }.container{
+            height: 100%;
+        }
+        .intro__slider{
+            height: 100%;
+        }
+        .intro__wrapper{
+            @include lg-d{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+            }
+           
+        }
+        .intro__downline{
+            margin-top: 30px;
+            font-size: 30px;
+            color: #fff;
+            padding-bottom: 300px;
+        }
+        h1{
+            font-size: 80px;
+            max-width: 600px;
+            line-height: 90px;
+            @include md-d{
+                font-size: 60px;
+                text-align: center;
+                line-height: 60px;
+            }
+        }
+        
+    }
+    &--sks{
+        background: url('../img/sks.jpg') no-repeat;
+        background-size: cover;
+        .intro__downline{
+            margin-top: 30px;
+            font-size: 30px;
+            color: #fff;
+            padding-bottom: 300px;
+        }
+        h1{
+            margin-top: -50px;
+            font-size: 60px;
             max-width: 600px;
             line-height: 90px;
             @include md-d{
@@ -64,7 +194,7 @@
     }
     &__remark{
         max-width: 500px;
-        font-size: 16.3682px;
+        font-size: 18px;
         line-height: 172%;
         color: $greyColor;
         margin-top: 15px;
@@ -129,20 +259,23 @@
         margin-right: 15px;
         margin-top: 150px;
         margin-left: 110px;
-        background: #1b1d28;
+        background: #1b1d28df;
         padding: 30px 10px;
         // border-radius: 30px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        transition: 0.3s linear;
+        transition: 0.3s linear;        
         @include md-d{
             display: none;
+            margin-right: 0;
         }
-        filter: drop-shadow(0px 0px 5px $accent);
+        // filter: drop-shadow(0px 0px 5px $accent);
         &:hover{
             transition: 0.3s linear;
-            filter: drop-shadow(0px 0px 10px $accent);
+            background: #1b1d28;
+
+            // filter: drop-shadow(0px 0px 10px $accent);
         }
         span{
             color: $accent;
@@ -157,6 +290,8 @@
                 border-bottom: 2px solid $accent;
                 padding-bottom: 10px;                
                 color: #fff;
+                text-align: center;
+                font-size: 20px;
                 &::placeholder{
                     text-align: center;
                     font-size: 18px;

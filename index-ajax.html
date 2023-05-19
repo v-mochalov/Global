@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
-    <title>Global IT</title>
+    <title>Global IT | Ajax</title>
     <link rel="stylesheet" href="./build/css/main.css" />
   </head>
 
@@ -14,11 +14,11 @@
   
   
 
-  <header id="header" class="header" >
+    <header id="header" class="header" >
       <div class="container">
         <div class="header__wrapper">
           <div class="header__logo  gsap__header">
-            <a href="#"> Global<span>IT</span></a>
+            <a href="index.html"> Global<span>IT</span></a>
           </div>         
 
           <div class="header__right">
@@ -52,7 +52,7 @@
             
             <nav>    
               <ul>
-                <li><a href="#direction">Головна</a></li>
+                <li><a href="index.html">Головна</a></li>
                 <li class="dropdown">
                   <div  class="link-hover link-hover--first" >
                     <div>IT Аутсорсінг</div>
@@ -63,8 +63,8 @@
                     </svg>
                   </div>
                   <div class="dropdown-content dropdown-content--first">
-                    <a href="#" class="link header__link">Оренда серверів</a>
-                    <a href="#" class="link header__link">Обслуговування комп'ютерної техніки</a>
+                    <a href="servera.html" class="link header__link">Оренда серверів</a>
+                    <a href="obslugovuvannya-pk.html" class="link header__link">Обслуговування комп'ютерної техніки</a>
                     <a href="#" class="link header__link">Обслуговування охоронних систем</a>
                   </div>
                 </li>
@@ -79,10 +79,10 @@
                   </div>
                   <div class="dropdown-content dropdown-content--second">
                     <a href="index-ajax.html" class="link header__link">Охоронні системи</a>
-                    <a href="#" class="link header__link">Відеонагляд</a>
-                    <a href="#" class="link header__link">Системи контролю доступу (СКД)</a>
-                    <a href="#" class="link header__link">Шлакбауми та турніккети</a>
-                    <a href="#" class="link header__link">Структуровані кабельні системи (СКС)</a>                    
+                    <a href="videonaglyad.html" class="link header__link">Відеонагляд</a>
+                    <a href="skd.html" class="link header__link">Системи контролю доступу (СКД)</a>
+                    <a href="shlakbaumi.html" class="link header__link">Шлакбауми та турніккети</a>
+                    <a href="sks.html" class="link header__link">Структуровані кабельні системи (СКС)</a>                    
                   </div>
                 </li>
                 <li><a href="#">Новини</a></li>
@@ -93,60 +93,115 @@
           </div>
         </div>         
       </div>       
-  </header>   
+    </header>     
 
       <main class="main">
 
-        <section class="intro intro--ajax">
-          <div class="container">
-            <div class="intro__slider">
-              <div class="intro__wrapper intro__wrapper--ajax">
-                <h1 class="intro__title gsap__opacity">
-                  Охоронні системи <span>AJAX</span>
-                </h1> 
-                <div class="intro__remark gsap__opacity">
-                  Індивідуальне рішення саме для вашої задачі:
-                  охорона квартири, захист приватного будинку, контроль офісу та інші вимоги для забезпечення безпеки.
-                </div>  
-                <div class="intro__btn btn btn--border btn--204 btn--md gsap__opacity">
-                  детальніше
-              </div>                             
-              </div> 
-              <div class="intro__form gsap__opacity">
-                <div class="intro__form-title">Отримайте розрахунак вартості - абсолютно <span>безкоштовно</span> </div>
-                <div class="intro__form-remark">Наш спеціаліст зв'яжеться з вами, проведе консультацію з вашого питання та прорахує вартість виконання робіт.</div>
-                <form action="telegram.php" method="POST" class="">
-                  <div class="intro__form-contain">
-                    <div class="intro__form-text">
-                      Вітаю, мене звати
-                    </div>
-                    <input type="text" name="user_name" placeholder="Степан Бандера" />
-                  </div>
-                  <div class="intro__form-contain">
-                    <div class="intro__form-text">
-                      Мій номер
-                    </div>
-                    <input type="number" name="user_interes" placeholder="066 123 45 67" />
-                  </div>                 
-                  <div class="intro__form-button"><button type="submit" class="btn btn--intro">залишити заявку</button></div>
-                </form>
-              </div> 
-            </div>
-          </div> 
-          <div class="intro__mouse">
-            <a href="#direction">
-              <svg width="67" height="55" viewBox="0 0 67 55" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <rect width="67" height="55" fill="url(#pattern0)"/>
-                <defs>
-                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                <use xlink:href="#image0_45_1074" transform="translate(0 -0.22619) scale(0.005 0.00613095)"/>
-                </pattern>
-                <image id="image0_45_1074" width="200" height="200" xlink:href="data:image/png;base64,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"/>
-                </defs>
-              </svg>
-            </a>
+        <section class="ajax">
+          <div class="intro--ajax-video">
+            <video muted autoplay class="" src="/build/img/showreel-animation.lg.mp4"></video>
           </div>
-        </section>      
+          <div class="container">
+            <div class="ajax__wrapper">
+              <div class="ajax__left">
+                <h1 class="ajax__title">
+                  Охоронні системи <span>AJAX</span>
+                </h1>
+              </div>
+              <div class="ajax__right">
+                <div class="intro__form gsap__opacity">
+                  <div class="intro__form-title">Отримайте розрахунак вартості - абсолютно <span>безкоштовно</span> </div>
+                  <div class="intro__form-remark">Наш спеціаліст зв'яжеться з вами, проведе консультацію з вашого питання та прорахує вартість виконання робіт.</div>
+                  <form action="telegram.php" method="POST" class="">
+                    <div class="intro__form-contain">
+                      <div class="intro__form-text">
+                        Вітаю, мене звати
+                      </div>
+                      <input type="text" name="user_name" placeholder="Степан Бандера" />
+                    </div>
+                    <div class="intro__form-contain">
+                      <div class="intro__form-text">
+                        Мій номер
+                      </div>
+                      <input type="number" name="user_interes" placeholder="066 123 45 67" />
+                    </div>                 
+                    <div class="intro__form-button"><button type="submit" class="btn btn--intro">залишити заявку</button></div>
+                  </form>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </section>    
+
+        <section class="ajax-product">
+          <div class="container">
+            <div class="ajax-product__title">
+
+            </div>
+            <div class="ajax-product__wrapper">
+              <div class="ajax-product__box ajax-product__box--1">
+                <div class="ajax-product__text">
+                  Стартові пакети
+                </div>
+              </div>
+              <div class="ajax-product__box ajax-product__box--2">
+                <div class="ajax-product__text">
+                  Хаби
+                </div>
+              </div>
+              <div class="ajax-product__box ajax-product__box--3">
+                <div class="ajax-product__text">
+                  Датчики протікання
+                </div>
+              </div>
+              <div class="ajax-product__box ajax-product__box--4">
+                <div class="ajax-product__text">
+                  Датчики руху
+                </div>
+              </div>
+              <div class="ajax-product__box ajax-product__box--5">
+                <div class="ajax-product__text">
+                  Пожежні датчики
+                </div>
+              </div>
+              <div class="ajax-product__box ajax-product__box--6">
+                <div class="ajax-product__text">
+                  Датчики відчинення
+                </div>
+              </div>
+              <div class="ajax-product__box ajax-product__box--7">
+                <div class="ajax-product__text">
+                  Датчики розбиття скла
+                </div>
+              </div>
+              <div class="ajax-product__box ajax-product__box--8">
+                <div class="ajax-product__text">
+                  Сирени
+                </div>
+              </div>
+              <div class="ajax-product__box ajax-product__box--9">
+                <div class="ajax-product__text">
+                  Ретранслятори
+                </div>
+              </div>
+              <div class="ajax-product__box ajax-product__box--10">
+                <div class="ajax-product__text">
+                  Керування та тривожні кнопки
+                </div>
+              </div>
+              <div class="ajax-product__box ajax-product__box--2">
+                <div class="ajax-product__text">
+                  Хаби
+                </div>
+              </div>
+              <div class="ajax-product__box ajax-product__box--11">
+                <div class="ajax-product__text">
+                 <b>Присторої автоматизації</b> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         
         <section class="intro__visible">
           <div class="intro__form">
@@ -174,14 +229,39 @@
           <div class="container">
             <h2>Виконаємо <span> монтаж</span> та <span>налаштування</span> </h2>
             <div class="desc__wrapper">
-              <ul class="desc__column">
-                <li class="desc__content">Запропонуємо Вам оптимальний тип і вартість сигналізації з урахуванням специфіки Вашого об'єкту</li>
-                <li class="desc__content">Ми маємо всі необхідні ліцензії та надаємо гарантію на якість робіт, обладнання та матеріали</li>
-                <li class="desc__content">Управління та контроль з будь-якого місця земної кулі, де є доступ до мережі Інтернет</li>
-                <li class="desc__content">До 7 років безперебійної роботи на одному заряді батареї</li>
-                <li class="desc__content">Виїзд нарядів охорони озброєних вогнепальною зброєю та з повноваженнями на затримання злочинців</li>
-
-              </ul>
+              <div class="desc__box">
+                <div class="desc__img">
+                  <img src="/build/img/icons/home.png" alt="Домівка">
+                </div>
+                <div class="desc__text">Вдома</div>
+              </div>
+              <div class="desc__box">
+                <div class="desc__img">
+                  <img src="/build/img/icons/kvartira.png" alt="Домівка">
+                </div>
+                <div class="desc__text">в квартирі</div>
+              </div>
+              <div class="desc__box">
+                <div class="desc__img">
+                  <img src="/build/img/icons/office.png" alt="Домівка">
+                </div>
+                <div class="desc__text">в офісі</div>
+              </div><div class="desc__box">
+                <div class="desc__img">
+                  <img src="/build/img/icons/shop.png" alt="Домівка">
+                </div>
+                <div class="desc__text">в магазині</div>
+              </div><div class="desc__box">
+                <div class="desc__img">
+                  <img src="/build/img/icons/plate.svg" alt="Домівка">
+                </div>
+                <div class="desc__text">в ресторані</div>
+              </div><div class="desc__box">
+                <div class="desc__img">
+                  <img src="/build/img/icons/zavod.svg" alt="Домівка">
+                </div>
+                <div class="desc__text">на виробництві</div>
+              </div>
             </div>
           </div>   
         </section> 
@@ -217,34 +297,33 @@
               <h2>Те, що робить нас <span>№1</span></h2>
             </div>
             <div class="benefits__remark gsap__benefits--title">
-              Почему именно Global IT? Все просто — потому что наша работа, это:
+              Чому саме Global IT? Все просто — тому що наша робота, це:
             </div>
             <div class="benefits__wrapper">
               <div class="benefits__box gsap__benefits--box">
                 <div class="benefits__box-number">01</div>
-                <div class="benefits__box-title">Надёжность и результативность</div>            
-                <div class="benefits__box-text">Mы нацелены на долгосрочное сотрудничество, ведь для нас это так же выгодно, как и для Вас.</div>
+                <div class="benefits__box-title">Надійність та результативність</div>            
+                <div class="benefits__box-text">Ми націлені на довготривале співробітництво, адже для нас це так само вигідно, як і для Вас.</div>
               </div>
               <div class="benefits__box gsap__benefits--box">
                 <div class="benefits__box-number">02</div>
-                <div class="benefits__box-title">Гибкость и индивидуальный подход</div>
-                <div class="benefits__box-text">Вы озвучиваете пожелания, мы воплощаем их в жизнь, мы поможем Вам сделать правильный выбор.</div>
+                <div class="benefits__box-title">Геучкість та індивідуальний підхід</div>
+                <div class="benefits__box-text">Ви озвучуєте своє бобажання, ми втілюємо їх до життя, ми допоможемо Вам зробити правильний вибір.</div>
               </div>
               <div class="benefits__box gsap__benefits--box">
                 <div class="benefits__box-number">03</div>
-                <div class="benefits__box-title">Репутация и доверие</div>
-                <div class="benefits__box-text">Мы дорожим своей репутацией и Вашим доверием, поэтому качество нашей работы всегда находится на должном уровне.</div>
+                <div class="benefits__box-title">Репутація та довіра</div>
+                <div class="benefits__box-text">Ми піклуємось про свою репутацію та Вашу довіру, тому якість наших робіт завжди знаходиться на довжному рівні.</div>
               </div>
               <div class="benefits__box gsap__benefits--box">
                 <div class="benefits__box-number">04</div>
-                <div class="benefits__box-title">Экономия и выгода</div>
-                <div class="benefits__box-text">Mы работаем с каждым клиентом индивидуально и на взаимовыгодных условиях.</div>
+                <div class="benefits__box-title">Економія та вигода</div>
+                <div class="benefits__box-text">Ми працюємо з кожним клієнтом індивідуально й на взаємовигідних умовах.</div>
               </div>
               <div class="benefits__box gsap__benefits--box">
                 <div class="benefits__box-number">05</div>
-                <div class="benefits__box-title">Ответственность 
-                  и порядочность</div>
-                <div class="benefits__box-text">Тщательный анализ Ваших запросов помогает подобрать наилучшее решение.</div>
+                <div class="benefits__box-title">Відповідальність та порядність</div>
+                <div class="benefits__box-text">Дослідний аналіз Ваших побажань допоможе підібрати найкраще рішення.</div>
               </div>
             </div>
           </div>
