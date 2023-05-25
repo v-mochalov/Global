@@ -1,0 +1,221 @@
+//Close acordeon
+$accordeonWidth: 100%; //With accordeon --- Длина акордеона
+$accordeonPadding: 24px 67px 24px 67px; //Padding accordeon --- Внутренние отступы
+$accordeonRadius: 15px; //Border radius
+$accordeonColorMain: #3f5858; //Text color
+$accordeonColorBg: rgba(255, 255, 255, 0.5); // Bg color
+$arrowsColor: $accent;
+//Open acordeon
+$acordeonMainColor: $accent;
+$openAcordeonTextColor: #6b7575;
+$openAcordeonBgColor: rgba(255, 255, 255, 0.5);
+$arrowsColorClose: $accent;
+.question {
+	margin-top: 150px;
+	background: url("../img/answers-bg.jpg") no-repeat;
+	background-size: cover;
+
+	@include md-d {
+		margin-top: 118px;
+		padding-bottom: 60px;
+	}
+	@include sm-d {
+		background: none;
+	}
+
+	&__button {
+		margin-top: 50px;
+		display: flex;
+		justify-content: center;
+		a {
+			margin-right: 31px;
+			&:last-child {
+				margin-right: 0;
+			}
+			@include sm-d {
+				margin-right: 0;
+				margin-bottom: 10px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		@include sm-d {
+			flex-direction: column;
+			align-items: center;
+			margin-top: 25px;
+		}
+	}
+	&__down-title {
+		margin-top: 150px;
+		margin-bottom: 15px;
+		@include md-d {
+			margin-top: 80px;
+		}
+	}
+	&__allies {
+		margin-top: 80px;
+		display: flex;
+		justify-content: space-between;
+		min-width: 0;
+		position: relative;
+		@include md-d {
+			margin-top: 60px;
+		}
+	}
+
+	//Slick settings
+	.slick-track {
+		min-width: 0;
+		display: flex;
+		align-items: flex-start;
+
+		@include md-d {
+			flex-wrap: wrap;
+		}
+	}
+	.slick-list {
+		overflow: hidden;
+		padding: 0px 0px 0px 0px;
+		justify-content: center;
+	}
+	.slick-slide {
+		display: flex;
+		justify-content: center;
+	}
+	.slick-arrow {
+		position: absolute;
+		bottom: -80px;
+		z-index: 10;
+		font-size: 0;
+		width: 45px;
+		height: 45px;
+		display: inline-block;
+		border-radius: 50%;
+	}
+	.slick-prev {
+		right: 50%;
+		background-image: url("../img/arrow-prew.png");
+		background-position: center;
+		margin-right: 7px;
+	}
+	.slick-next {
+		left: 50%;
+		background-image: url("../img/arrow-next.png");
+		background-position: center;
+		margin-left: 7px;
+	}
+}
+
+.wrapper {
+	height: 100%;
+	max-width: 100%;
+	display: flex;
+	justify-content: center;
+	margin: 83px auto 0;
+	@include md-d {
+		margin: 50px auto 0;
+	}
+}
+
+.block__item {
+	margin-bottom: 15px;
+	width: 1000px;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+border-radius: 10px;
+	@include md-d {
+		margin-bottom: 10px;
+	}
+}
+.block__title {
+	color: $accordeonColorMain;
+	border-radius: $accordeonRadius;
+	padding: $accordeonPadding;
+	background: $accordeonColorBg;
+	text-align: left;
+	cursor: pointer;
+	//text settings
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 25px;
+	//any settings
+	box-shadow: 0px 14px 50px 5px rgba(178, 200, 200, 0.1);
+	backdrop-filter: blur(40px);
+	transition: all 0.2s linear;
+	@include md-d {
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 150%;
+		padding: 15px 51px 15px 18px;
+	}
+}
+
+.block__title::before,
+.block__title::after {
+	content: "";
+	width: 20px;
+	height: 2px;
+	background-color: $arrowsColorClose;
+	position: absolute;
+	top: 50%;
+	transform: translate(0%, -50%);
+	transition: all 0.3s ease 0s;
+	@include md-d {
+		width: 12px;
+	}
+}
+
+.block__title:before {
+	transform: rotate(40deg);
+	right: 27px;
+}
+.block__title::after {
+	transform: rotate(-40deg);
+	right: 42px;
+	@include md-d {
+		right: 36px;
+	}
+}
+
+.block__title.active::before,
+.block__title.active::after {
+	background-color: $arrowsColor;
+}
+
+.block__title.active::before {
+	transform: rotate(-40deg);
+}
+
+.block__title.active::after {
+	transform: rotate(40deg);
+}
+.block__title.active {
+	color: $acordeonMainColor;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	box-shadow: none;
+}
+
+.block__text {
+	display: none;
+	padding: 0px 33px;
+	margin-bottom: 10px;
+	padding: 0px 100px 25px 67px;
+	padding-left: 67px;
+	padding-bottom: 25px;
+
+	color: $openAcordeonTextColor;
+	font-size: 16px;
+	line-height: 28px;
+	background: $openAcordeonBgColor;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	backdrop-filter: blur(40px);
+	@include md-d {
+		font-size: 14px;
+		line-height: 22px;
+		padding: 0px 20px 17px 25px;
+	}
+}

@@ -1,0 +1,34 @@
+.turniket{
+    padding-top: 120px;
+   
+    h2{
+        font-size: 55px;
+        line-height: 70px;
+    }
+    &__wrapper{}
+    &__remark {
+        @extend %font800;
+        max-width: 70%;
+        color: #5c5c5c;
+        font-size: 26px;
+        line-height: 26px;
+        margin-top: 15px;
+    }
+    &__content{
+        margin-top: 70px;
+    }
+    &__box{
+        margin-top: 40px;
+    }
+    &__upline {
+        @extend %font800;
+        color: $accent;
+        font-size: 32px;
+    }
+    &__text{
+        color: #5c5c5c;
+        font-size: 25px;
+        line-height: 30px;
+        margin-top: 20px;
+    }
+}
