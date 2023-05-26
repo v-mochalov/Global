@@ -2,32 +2,42 @@
     padding-top: 120px;
    
     h2{
+        color: #5c5c5c;
+
         font-size: 55px;
-        line-height: 70px;
+        line-height: 60px;
     }
-    &__wrapper{}
+    &__wrapper{
+    }
     &__remark {
         @extend %font800;
-        max-width: 70%;
-        color: #5c5c5c;
-        font-size: 26px;
-        line-height: 26px;
+        max-width: 60%;
+        color: #cccccc;
+        font-size: 20px;
+        line-height: 20px;
+
         margin-top: 15px;
     }
     &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin-top: 70px;
     }
     &__box{
         margin-top: 40px;
+        max-width: 1000px;
     }
     &__upline {
         @extend %font800;
         color: $accent;
-        font-size: 32px;
+        font-size: 36px;
     }
     &__text{
+        @extend %font800;
+
         color: #5c5c5c;
-        font-size: 25px;
+        font-size: 30px;
         line-height: 30px;
         margin-top: 20px;
     }

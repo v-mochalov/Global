@@ -118,18 +118,18 @@ $arrowsColorClose: $accent;
 	}
 }
 
-.block__item {
+.blocks__item {
 	margin-bottom: 15px;
 	width: 1000px;
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
 border-radius: 10px;
 	@include md-d {
 		margin-bottom: 10px;
 	}
 }
-.block__title {
+.blocks__title {
 	color: $accordeonColorMain;
 	border-radius: $accordeonRadius;
 	padding: $accordeonPadding;
@@ -152,8 +152,8 @@ border-radius: 10px;
 	}
 }
 
-.block__title::before,
-.block__title::after {
+.blocks__title::before,
+.blocks__title::after {
 	content: "";
 	width: 20px;
 	height: 2px;
@@ -167,11 +167,11 @@ border-radius: 10px;
 	}
 }
 
-.block__title:before {
+.blocks__title:before {
 	transform: rotate(40deg);
 	right: 27px;
 }
-.block__title::after {
+.blocks__title::after {
 	transform: rotate(-40deg);
 	right: 42px;
 	@include md-d {
@@ -179,8 +179,8 @@ border-radius: 10px;
 	}
 }
 
-.block__title.active::before,
-.block__title.active::after {
+.blocks__title.active::before,
+.blocks__title.active::after {
 	background-color: $arrowsColor;
 }
 
