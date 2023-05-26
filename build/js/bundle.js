@@ -145,10 +145,10 @@ document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
 }); //--------------------------------------------------Acordeon BLOCK
 
 $(document).ready(function () {
-  $('.blocks__title').click(function (event) {
-    if ($('.blocks').hasClass('one')) {
-      $('.blocks__title').not($(this)).removeClass('active');
-      $('.blocks__text').not($(this).next()).slideUp(300);
+  $('.block__title').click(function (event) {
+    if ($('.block').hasClass('one')) {
+      $('.block__title').not($(this)).removeClass('active');
+      $('.block__text').not($(this).next()).slideUp(300);
     }
 
     $(this).toggleClass('active').next().slideToggle(300);
@@ -156,10 +156,10 @@ $(document).ready(function () {
 }); //--------------------------------------------------Acordeon BLOCK TURNIKET
 
 $(document).ready(function () {
-  $('.block__title').click(function (event) {
-    if ($('.block').hasClass('one')) {
-      $('.block__title').not($(this)).removeClass('active');
-      $('.block__text').not($(this).next()).slideUp(300);
+  $('.blocks__title').click(function (event) {
+    if ($('.blocks').hasClass('ones')) {
+      $('.blocks__title').not($(this)).removeClass('active');
+      $('.blocks__text').not($(this).next()).slideUp(300);
     }
 
     $(this).toggleClass('active').next().slideToggle(300);

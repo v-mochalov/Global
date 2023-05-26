@@ -10,7 +10,7 @@ $acordeonMainColor: $accent;
 $openAcordeonTextColor: #6b7575;
 $openAcordeonBgColor: rgba(255, 255, 255, 0.5);
 $arrowsColorClose: $accent;
-.question {
+.questions {
 	margin-top: 150px;
 	background: url("../img/answers-bg.jpg") no-repeat;
 	background-size: cover;
@@ -107,7 +107,7 @@ $arrowsColorClose: $accent;
 	}
 }
 
-.wrapper {
+.wrappers {
 	height: 100%;
 	max-width: 100%;
 	display: flex;
@@ -184,21 +184,21 @@ border-radius: 10px;
 	background-color: $arrowsColor;
 }
 
-.block__title.active::before {
+.blocks__title.active::before {
 	transform: rotate(-40deg);
 }
 
-.block__title.active::after {
+.blocks__title.active::after {
 	transform: rotate(40deg);
 }
-.block__title.active {
+.blocks__title.active {
 	color: $acordeonMainColor;
 	border-bottom-left-radius: 0px;
 	border-bottom-right-radius: 0px;
 	box-shadow: none;
 }
 
-.block__text {
+.blocks__text {
 	display: none;
 	padding: 0px 33px;
 	margin-bottom: 10px;
