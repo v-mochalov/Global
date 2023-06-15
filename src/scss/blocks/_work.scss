@@ -1,6 +1,9 @@
 .work {
     position: relative;
     padding-top: 152px;
+    &--shlakbaum{
+        padding-top: 70px !important;
+    }
     @include md-d{
         padding-top: 66px;
     }
